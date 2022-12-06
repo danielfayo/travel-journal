@@ -1,9 +1,17 @@
-import './App.css';
+import Nav from "./components/Nav";
+import Card from "./components/Card";
+import element from "./data";
 
 function App() {
+  const data = element.map(item => {
+    return <Card
+      {...item}
+    />
+  })
   return (
     <>
-    <h1>Heading</h1>
+    <Nav/>
+    {data}
     </>
   );
 }
